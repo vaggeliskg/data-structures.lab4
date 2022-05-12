@@ -27,15 +27,10 @@ struct priority_queue {
 static void naive_initialize_list(PriorityQueue pqueue, Vector values) {
 	// Απλά κάνουμε insert τα στοιχεία ένα ένα (όπως η naive_heapify).
 	int size = vector_size(values);
-<<<<<<< HEAD
 	for(int i = 0 ; i < size ; i++) {
 		pqueue_insert(pqueue, vector_get_at(values, i));
 	}
-
-
-=======
->>>>>>> 0c522ba904d71a807dec4b9f5bc5ade902ac9ed1
-	// Προαιρετικά: sort τα στοιχεία και εισαγωγή όλα μαζί (πιο αποδοτικό).
+	// Πρoαιρετικά: sort τα στοιχεία και εισαγωγή όλα μαζί (πιο αποδοτικό).
 	// ...
 }
 
