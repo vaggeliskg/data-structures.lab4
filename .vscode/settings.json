@@ -26,4 +26,11 @@
 		"arg7": "",
 		"arg8": "",
 	},
+	"files.associations": {
+		"*.tcc": "c",
+		"bitset": "c",
+		"string": "c",
+		"string_view": "c",
+		"typeinfo": "c"
+	},
 }
