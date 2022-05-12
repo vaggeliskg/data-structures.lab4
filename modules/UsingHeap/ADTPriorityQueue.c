@@ -94,8 +94,13 @@ static void naive_heapify(PriorityQueue pqueue, Vector values) {
 	// Απλά κάνουμε insert τα στοιχεία ένα ένα.
 	// TODO: υπάρχει πιο αποδοτικός τρόπος να γίνει αυτό!
 	int size = vector_size(values);
-	for (int i = 0; i < size; i++)
-		pqueue_insert(pqueue, vector_get_at(values, i));
+	for (int i = 0; i < size; i++) {
+		Pointer value = vector_get_at(values, i);
+		vector_insert_last(pqueue->vector, value);
+		}
+		for(int node = size / 2 ; node >= 1 ; node--) {
+			bubble_down(pqueue, node);
+		}
 }
 
 

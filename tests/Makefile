@@ -4,7 +4,7 @@
 # Υλοποιήσεις μέσω Heap: ADTPriorityQueue
 # Το Heap αλλά και το test χρησιμοποιούν Vector, οπότε χρειαζόμαστε και μια υλοποίηση του ADTVector.
 #
-UsingHeap_ADTPriorityQueue_test_OBJS    = ADTPriorityQueue_test.o $(MODULES)/UsingHeap/ADTPriorityQueue.o $(MODULES)/UsingDynamicArray/ADTVector.o
+UsingHeap_ADTPriorityQueue_test_OBJS = ADTPriorityQueue_test.o $(MODULES)/UsingHeap/ADTPriorityQueue.o $(MODULES)/UsingDynamicArray/ADTVector.o
 
 # Υλοποιήσεις μέσω ADTList: ADTPriorityQueue
 # Η υλοποίηση χρησιμοποιεί List, οπότε χρειαζόμαστε και μια υλοποίηση του ADTList.
