@@ -93,9 +93,16 @@ static void bubble_down(PriorityQueue pqueue, int node) {
 static void naive_heapify(PriorityQueue pqueue, Vector values) {
 	// Απλά κάνουμε insert τα στοιχεία ένα ένα.
 	// TODO: υπάρχει πιο αποδοτικός τρόπος να γίνει αυτό!
-	int size = vector_size(values);
-	for (int i = 0; i < size; i++)
-		pqueue_insert(pqueue, vector_get_at(values, i));
+		int size = vector_size(values);
+		// for (int i = 0; i < size; i++) {
+		// 	pqueue_insert(pqueue, vector_get_at(values, i));
+		// }
+		for(int node = size / 2 ; node >= 1 ; node--) {
+			pqueue_insert(pqueue,vector_get_at(values,node));
+			bubble_down(pqueue, node);
+		}
+	
+
 }
 
 
@@ -105,6 +112,7 @@ PriorityQueue pqueue_create(CompareFunc compare, DestroyFunc destroy_value, Vect
 	assert(compare != NULL);	// LCOV_EXCL_LINE
 
 	PriorityQueue pqueue = malloc(sizeof(*pqueue));
+
 	pqueue->compare = compare;
 	pqueue->destroy_value = destroy_value;
 
