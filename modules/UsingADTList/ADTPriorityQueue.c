@@ -62,7 +62,6 @@ Pointer pqueue_max(PriorityQueue pqueue) {
 
 void pqueue_insert(PriorityQueue pqueue, Pointer value) {
 	Pointer first_node_value;
-	//ListNode last_node = LIST_BOF;
 	if(list_size(pqueue->list) == 0) {
 		list_insert_next(pqueue->list, LIST_BOF, value);
 		return;
@@ -75,7 +74,6 @@ void pqueue_insert(PriorityQueue pqueue, Pointer value) {
 			list_insert_next(pqueue->list, list_first(pqueue->list) , value);
 			return;
 		}
-		//last_node = list_last(pqueue->list);
 	}
 	else if(list_size(pqueue->list) > 1) {
 		for(ListNode node = list_first(pqueue->list);
@@ -96,7 +94,6 @@ void pqueue_insert(PriorityQueue pqueue, Pointer value) {
 					return;
 				}
 			}
-			//last_node = node;
 		}
 	}
 }
